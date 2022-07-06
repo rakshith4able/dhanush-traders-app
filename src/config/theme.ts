@@ -37,20 +37,23 @@ const theme = createTheme({
     },
   },
   customColors: {
-    loginButton: '#18a399',
+    lightBlue: '#00ADB5',
+    darkGrey: '#393E46',
   },
 });
 
 declare module '@mui/material/styles' {
   interface Theme {
     customColors: {
-      loginButton: string;
+      lightBlue: string;
+      darkGrey: string;
     };
   }
   // allow configuration using `createTheme`
   interface ThemeOptions {
     customColors?: {
-      loginButton?: string;
+      lightBlue?: string;
+      darkGrey?: string;
     };
   }
 }
