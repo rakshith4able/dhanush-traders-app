@@ -20,7 +20,11 @@ export const HeroTitle = styled(Typography)(({ theme }) => ({
     fontSize: '6rem',
   },
   [theme.breakpoints.down('md' as Breakpoint)]: {
-    fontSize: '5rem',
+    fontSize: '4rem',
+    textAlign: 'center',
+  },
+  [theme.breakpoints.down('sm' as Breakpoint)]: {
+    fontSize: '4rem',
     textAlign: 'center',
   },
 }));

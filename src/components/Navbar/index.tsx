@@ -4,17 +4,19 @@ import {
   Typography,
   Box,
   Menu,
-  IconButton,
   MenuItem,
   Button,
+  IconButton
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+
 import { Link } from 'react-scroll';
 
 import { NavbarContainer, StyledAppBar } from './Navbar.styled';
+import ContactIconsContainer from './ContactIconsContainer';
 // import navLinks from './navLinks';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About', 'Products', 'Gallery', 'Services'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navbar(props: any) {
@@ -55,6 +57,7 @@ export default function Navbar(props: any) {
                 </Link>
               ))}
             </Box>
+            <ContactIconsContainer/>
           </Box>
 
           <Box
@@ -102,8 +105,7 @@ export default function Navbar(props: any) {
                 ))}
               </Menu>
             </Box>
-
-            <Box sx={{ flex: '10%' }} />
+            <ContactIconsContainer/>
           </Box>
         </Toolbar>
       </NavbarContainer>
