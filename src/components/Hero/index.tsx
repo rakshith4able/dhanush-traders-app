@@ -8,6 +8,7 @@ import {
   GridItem1,
   GridItem2,
   GridContainer,
+  VideoContainer,
 } from './Hero.styled';
 
 export default function Hero() {
@@ -22,7 +23,14 @@ export default function Hero() {
           </HeroDescription>
         </GridItem1>
         <GridItem2 item xs={12} md={6}>
-          <ReactPlayer  />
+          <VideoContainer>
+            <ReactPlayer
+              url='https://www.youtube.com/watch?v=U9zUaOX8vgE'
+              controls
+              width='100%'
+              style={{ borderRadius: '1em', overflow: 'hidden' }}
+            />
+          </VideoContainer>
         </GridItem2>
       </GridContainer>
     </HeroContainer>

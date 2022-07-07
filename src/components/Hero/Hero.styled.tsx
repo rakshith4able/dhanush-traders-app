@@ -1,9 +1,10 @@
+import { Padding } from '@mui/icons-material';
 import { Box, Grid, styled, Typography } from '@mui/material';
 import { Breakpoint } from '@mui/material';
 
 export const HeroContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#EEEEEE',
-  height:'auto'
+  height: 'auto',
 }));
 
 export const HeroTitle = styled(Typography)(({ theme }) => ({
@@ -52,14 +53,9 @@ export const HeroDescription = styled(Typography)(({ theme }) => ({
 
 export const GridContainer = styled(Grid)(({ theme }) => ({
   minHeight: '90vh',
-  backgroundColor:theme.palette.primary.main,
-  [theme.breakpoints.down('lg' as Breakpoint)]: {
-  
-  },
-  [theme.breakpoints.down('md' as Breakpoint)]: {
-  },
+  backgroundColor: theme.palette.primary.main,
+  padding: `0 0  ${theme.spacing(3)}  0`,
 }));
-
 
 export const GridItem1 = styled(Grid)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
@@ -69,23 +65,29 @@ export const GridItem1 = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down('lg' as Breakpoint)]: {
     height: '90vh',
   },
-  [theme.breakpoints.down('md' as Breakpoint)]: {},
+  [theme.breakpoints.down('md' as Breakpoint)]: {
+    height: 'auto',
+    // padding:theme.spacing(1),
+  },
 }));
 
-
-
-
 export const GridItem2 = styled(Grid)(({ theme }) => ({
-  backgroundColor: theme.customColors.lightBlue,
+  // backgroundColor: theme.customColors.lightBlue,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  alignItems:'center',
-  textAlign:'center',
-  [theme.breakpoints.down('lg' as Breakpoint)]: {
-  
-  },
+  alignItems: 'center',
+  textAlign: 'center',
+
+  [theme.breakpoints.down('lg' as Breakpoint)]: {},
   [theme.breakpoints.down('md' as Breakpoint)]: {
-    height: '100vh',
+    justifyContent: 'flex-start',
   },
+}));
+
+export const VideoContainer = styled(Box)(({ theme }) => ({
+  width: '86%',
+  borderRadius: '1em',
+  overflow:'hidden',
+  boxShadow: `2px 2px 20px ${theme.customColors.darkGrey}`,
 }));
