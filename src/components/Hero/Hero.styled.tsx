@@ -12,19 +12,19 @@ export const HeroTitle = styled(Typography)(({ theme }) => ({
   padding: '0 1rem',
   width: '80%',
   fontWeight: 300,
-  fontSize: '7rem',
+  fontSize: '4rem',
   lineHeight: 1,
   margin: '0 auto',
   [theme.breakpoints.down('lg' as Breakpoint)]: {
     width: '100%',
-    fontSize: '6rem',
+    fontSize: '3rem',
   },
   [theme.breakpoints.down('md' as Breakpoint)]: {
-    fontSize: '4rem',
+    fontSize: '3rem',
     textAlign: 'center',
   },
   [theme.breakpoints.down('sm' as Breakpoint)]: {
-    fontSize: '4rem',
+    fontSize: '3rem',
     textAlign: 'center',
   },
 }));
@@ -33,7 +33,7 @@ export const HeroDescription = styled(Typography)(({ theme }) => ({
   color: '#EEE',
   padding: '0 1.1rem',
   fontWeight: 200,
-  fontSize: '3rem',
+  fontSize: '2rem',
   lineHeight: 1.5,
   textAlign: 'justify',
   width: '80%',
@@ -42,13 +42,13 @@ export const HeroDescription = styled(Typography)(({ theme }) => ({
     width: '100%',
   },
   [theme.breakpoints.down('md' as Breakpoint)]: {
-    fontSize: '2rem',
+    fontSize: '1.5rem',
     textAlign: 'center',
     width: '70%',
     margin: '1em auto',
   },
   [theme.breakpoints.down('sm' as Breakpoint)]: {
-    fontSize: '2rem',
+    fontSize: '1.5rem',
     textAlign: 'center',
     width: '100%',
     margin: '1em auto',
@@ -92,6 +92,6 @@ export const GridItem2 = styled(Grid)(({ theme }) => ({
 export const VideoContainer = styled(Box)(({ theme }) => ({
   width: '86%',
   borderRadius: '1em',
-  overflow:'hidden',
+  overflow: 'hidden',
   boxShadow: `2px 2px 20px ${theme.customColors.darkGrey}`,
 }));

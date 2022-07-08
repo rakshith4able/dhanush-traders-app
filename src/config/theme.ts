@@ -39,6 +39,7 @@ const theme = createTheme({
   customColors: {
     lightBlue: '#00ADB5',
     darkGrey: '#393E46',
+    white: '#fff',
   },
 });
 
@@ -47,6 +48,7 @@ declare module '@mui/material/styles' {
     customColors: {
       lightBlue: string;
       darkGrey: string;
+      white: string;
     };
   }
   // allow configuration using `createTheme`
@@ -54,6 +56,7 @@ declare module '@mui/material/styles' {
     customColors?: {
       lightBlue?: string;
       darkGrey?: string;
+      white?: string;
     };
   }
 }
