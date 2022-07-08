@@ -1,12 +1,16 @@
 {
   "files": {
-    "main.js": "/dhanush-traders-app/static/js/main.230e2708.js",
+    "main.js": "/dhanush-traders-app/static/js/main.239afa1b.js",
     "static/js/787.b5ff990b.chunk.js": "/dhanush-traders-app/static/js/787.b5ff990b.chunk.js",
+    "static/media/asianpaints.png": "/dhanush-traders-app/static/media/asianpaints.518a90e9cbe6c94de77a.png",
+    "static/media/anchor.png": "/dhanush-traders-app/static/media/anchor.b583d4a95f06a94e56f7.png",
+    "static/media/syska.png": "/dhanush-traders-app/static/media/syska.da931e77121700c583e1.png",
+    "static/media/gm.svg": "/dhanush-traders-app/static/media/gm.2712994edd42d3a25d0e8fde5115e144.svg",
     "index.html": "/dhanush-traders-app/index.html",
-    "main.230e2708.js.map": "/dhanush-traders-app/static/js/main.230e2708.js.map",
+    "main.239afa1b.js.map": "/dhanush-traders-app/static/js/main.239afa1b.js.map",
     "787.b5ff990b.chunk.js.map": "/dhanush-traders-app/static/js/787.b5ff990b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.230e2708.js"
+    "static/js/main.239afa1b.js"
   ]
 }
