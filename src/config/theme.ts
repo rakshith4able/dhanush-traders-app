@@ -15,7 +15,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Poppins,sans-serif',
+    fontFamily: 'Montserrat, sans-serif',
   },
   components: {
     MuiIconButton: {

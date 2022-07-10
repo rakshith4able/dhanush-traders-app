@@ -1,14 +1,16 @@
 import { styled, Box, Typography, Breakpoint } from '@mui/material';
+import { motion ,AnimateSharedLayout } from 'framer-motion';
 
 import { convertHexToRGBA } from '../../utils/colors';
+
 
 export const ProductsContainer = styled(Box)(({ theme }) => ({
   height: '100vh',
   backgroundColor: theme.customColors.darkGrey,
   padding: theme.spacing(3),
-  display:'flex',
-  flexDirection:'column',
-  justifyContent:'space-evenly'
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
 }));
 
 export const ProductsList = styled(Box)(({ theme }) => ({
@@ -26,10 +28,9 @@ export const ProductsList = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm' as Breakpoint)]: {
     gridTemplateColumns: '1fr',
   },
-
 }));
 
-export const ProductsListItem = styled(Box)(({ theme }) => ({
+export const ProductsListItem = styled(motion.div)(({ theme }) => ({
   width: '12rem',
   borderRadius: '1em',
   display: 'flex',
@@ -40,12 +41,10 @@ export const ProductsListItem = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm' as Breakpoint)]: {
     width: '8rem',
-    
   },
   '& img': {
     width: '100%',
   },
-
 }));
 
 export const ProductsTitle = styled(Typography)(({ theme }) => ({

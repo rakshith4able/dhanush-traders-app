@@ -1,13 +1,14 @@
 import { Padding } from '@mui/icons-material';
 import { Box, Grid, styled, Typography } from '@mui/material';
 import { Breakpoint } from '@mui/material';
+import { motion } from 'framer-motion';
 
 export const HeroContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#EEEEEE',
   height: 'auto',
 }));
 
-export const HeroTitle = styled(Typography)(({ theme }) => ({
+export const HeroTitle = styled(motion.h1)(({ theme }) => ({
   color: '#EEE',
   padding: '0 1rem',
   width: '80%',
@@ -29,7 +30,7 @@ export const HeroTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
-export const HeroDescription = styled(Typography)(({ theme }) => ({
+export const HeroDescription = styled(motion.h2)(({ theme }) => ({
   color: '#EEE',
   padding: '0 1.1rem',
   fontWeight: 200,
@@ -89,7 +90,7 @@ export const GridItem2 = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export const VideoContainer = styled(Box)(({ theme }) => ({
+export const VideoContainer = styled(motion.div)(({ theme }) => ({
   width: '86%',
   borderRadius: '1em',
   overflow: 'hidden',

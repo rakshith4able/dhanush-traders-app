@@ -1,5 +1,8 @@
+import React, { useEffect } from 'react';
 import { Typography } from '@mui/material';
-import React from 'react';
+import { useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 import {
   ProductsContainer,
   ProductsList,
@@ -17,31 +20,54 @@ import {
   havellsLogo,
 } from '../../assets/images';
 
+const productVariants = {
+  visible: {
+    opacity: 1,
+  },
+  hidden: { opacity: 0 },
+};
+
+const productsList = [
+  { image: havellsLogo },
+  { image: anchorLogo },
+  { image: greatwhiteLogo },
+  { image: gmLogo },
+  { image: finolexLogo },
+  { image: asianpaintsLogo },
+];
+
 export default function Products() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
   return (
-    <ProductsContainer id='products'>
+    <ProductsContainer ref={ref} id='products'>
       <ProductsTitle variant='h3' align='center'>
         Available Products
       </ProductsTitle>
       <ProductsList>
-        <ProductsListItem>
-          <img src={havellsLogo} alt='' />
-        </ProductsListItem>
-        <ProductsListItem>
-          <img src={anchorLogo} alt='' />
-        </ProductsListItem>
-        <ProductsListItem>
-          <img src={greatwhiteLogo} alt='' />
-        </ProductsListItem>
-        <ProductsListItem>
-          <img src={gmLogo} alt='' />
-        </ProductsListItem>
-        <ProductsListItem>
-          <img src={finolexLogo} alt='' />
-        </ProductsListItem>
-        <ProductsListItem>
-          <img src={asianpaintsLogo} alt='' />
-        </ProductsListItem>
+        {productsList.map((product, index) => (
+          <ProductsListItem
+            key={product.image.toString()}
+            initial='hidden'
+            animate={controls}
+            transition={{
+              type: 'tween',
+              duration: 1 * (index + 1),
+            }}
+            variants={productVariants}
+          >
+            <img src={product.image} alt='' />
+          </ProductsListItem>
+        ))}
       </ProductsList>
     </ProductsContainer>
   );
