@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import AspectRatio from '../AspectRatio/AspectRatio';
 
 import {
   HeroContainer,
@@ -81,12 +82,15 @@ export default function Hero() {
               delay: 1,
             }}
           >
-            <ReactPlayer
-              url='https://www.youtube.com/watch?v=U9zUaOX8vgE'
-              controls
-              width='100%'
-              style={{ borderRadius: '1em', overflow: 'hidden' }}
-            />
+            <AspectRatio ratio={16 / 9}>
+              <ReactPlayer
+                url='https://www.youtube.com/watch?v=U9zUaOX8vgE'
+                controls
+                width='100%'
+                height='100%'
+                style={{ borderRadius: '1em', overflow: 'hidden' }}
+              />
+            </AspectRatio>
           </VideoContainer>
         </GridItem2>
       </GridContainer>

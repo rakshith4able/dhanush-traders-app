@@ -60,8 +60,9 @@ export default function Products() {
             initial='hidden'
             animate={controls}
             transition={{
-              type: 'tween',
-              duration: 1 * (index + 1),
+              type: 'spring',
+              duration: 0.5,
+              delay: 0.5 * (index + 1),
             }}
             variants={productVariants}
           >
