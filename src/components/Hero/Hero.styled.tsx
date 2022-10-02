@@ -59,6 +59,7 @@ export const HeroDescription = styled(motion.h2)(({ theme }) => ({
 export const GridContainer = styled(Grid)(({ theme }) => ({
   minHeight: '90vh',
   backgroundColor: theme.palette.primary.main,
+  justifyContent:'center',
   padding: `0 0  ${theme.spacing(3)}  0`,
 }));
 

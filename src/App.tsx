@@ -1,9 +1,9 @@
 import React, { MutableRefObject, useRef } from 'react';
 import Hero from './components/Hero';
-import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Gallery from './components/Gallery/Gallery';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Products />
       <Gallery />
-      <Contact />
+      <Services />
     </>
     // <div
     //   style={{

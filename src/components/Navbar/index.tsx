@@ -6,7 +6,8 @@ import {
   Menu,
   MenuItem,
   Button,
-  IconButton
+  IconButton,
+  useTheme,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -14,13 +15,13 @@ import { Link } from 'react-scroll';
 
 import { NavbarContainer, StyledAppBar } from './Navbar.styled';
 import ContactIconsContainer from './ContactIconsContainer';
-// import navLinks from './navLinks';
+import navLinks from './navLinks';
 
-const pages = ['About', 'Products', 'Gallery', 'Services'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const navLinks = ['Home', 'Products', 'Gallery', 'Services'];
 
 export default function Navbar(props: any) {
   const { refs } = props;
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -35,7 +36,7 @@ export default function Navbar(props: any) {
 
   return (
     <StyledAppBar onClick={() => {}} position='static' elevation={0}>
-      <NavbarContainer maxWidth='xl'>
+      <NavbarContainer maxWidth='xl' id='home'>
         <Toolbar sx={{ width: '100%' }} disableGutters>
           <Box
             sx={{
@@ -46,18 +47,26 @@ export default function Navbar(props: any) {
             }}
           >
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page) => (
-                <Link to='contact' key={page} smooth>
+              {navLinks.map((link) => (
+                <Link
+                  to={link.linkText.toLowerCase()}
+                  key={link.linkText}
+                  smooth
+                >
                   <Button
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{
+                      my: 2,
+                      color: 'white',
+                      display: 'block',
+                    }}
                   >
-                    {page}
+                    {link.linkText}
                   </Button>
                 </Link>
               ))}
             </Box>
-            <ContactIconsContainer/>
+            <ContactIconsContainer />
           </Box>
 
           <Box
@@ -96,16 +105,18 @@ export default function Navbar(props: any) {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link to='contact'>
-                      <Typography textAlign='center'>{page}</Typography>
+                {navLinks.map((link) => (
+                  <MenuItem key={link.linkText}>
+                    <Link to={link.linkText.toLowerCase()} onClick={handleCloseNavMenu} smooth>
+                      <Typography textAlign='center'>
+                        {link.linkText}
+                      </Typography>
                     </Link>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
-            <ContactIconsContainer/>
+            <ContactIconsContainer />
           </Box>
         </Toolbar>
       </NavbarContainer>

@@ -18,7 +18,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <GalleryContainer>
+    <GalleryContainer id='gallery'>
       <GalleryTitle>Gallery</GalleryTitle>
       <PhotoAlbum
         layout='rows'

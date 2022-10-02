@@ -25,7 +25,6 @@ export const GalleryTitle = styled(Typography)(({ theme }) => ({
 
 export const GalleryContainer = styled(Box)(({ theme }) => ({
   height: '100vh',
-
   backgroundColor: theme.palette.primary.main,
   display: 'flex',
   flexDirection:"column",
@@ -38,7 +37,7 @@ export const GalleryContainer = styled(Box)(({ theme }) => ({
     height: '80%',
     padding: '1em',
     borderRadius: '1em',
-    overflow: 'scroll',
+    overflowY: 'scroll',
     backgroundColor: theme.customColors.white,
 
     '&::-webkit-scrollbar': {

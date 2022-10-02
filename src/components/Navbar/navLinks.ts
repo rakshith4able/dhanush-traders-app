@@ -4,13 +4,11 @@ export interface INavLink {
   onclick?: (ref: HTMLElement) => void;
 }
 
-const scrollTo = (ref: HTMLElement) => {
-  ref.scrollIntoView();
-};
-
 const navLinks: INavLink[] = [
-  { linkText: 'Home', path: '/', onclick: scrollTo },
-  { linkText: 'Contact', path: '/contact' },
+  { linkText: 'Home', path: '/' },
+  { linkText: 'Products', path: '/products' },
+  { linkText: 'Gallery', path: '/gallery' },
+  { linkText: 'Services', path: '/services' },
 ];
 
 export default navLinks;

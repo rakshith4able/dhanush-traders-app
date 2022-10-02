@@ -43,7 +43,7 @@ export default function Hero() {
   }, [controls, inView]);
 
   return (
-    <HeroContainer ref={ref}>
+    <HeroContainer  ref={ref}>
       <GridContainer container>
         <GridItem1 item xs={12} md={6}>
           <HeroTitle
@@ -71,7 +71,7 @@ export default function Hero() {
             materials.
           </HeroDescription>
         </GridItem1>
-        <GridItem2 item xs={12} md={6}>
+        {/* <GridItem2 item xs={12} md={6}>
           <VideoContainer
             initial='videoHidden'
             animate={videoContainerControls}
@@ -92,7 +92,7 @@ export default function Hero() {
               />
             </AspectRatio>
           </VideoContainer>
-        </GridItem2>
+        </GridItem2> */}
       </GridContainer>
     </HeroContainer>
   );
